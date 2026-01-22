@@ -5,7 +5,7 @@ import studentRouter from './routers/student.routes.js';
 import userRouter from './routers/users.routes.js';
 import userAuth from './middleware/userJwtAuth.js';
 import { MulterError } from 'multer';
-import limiter from 'express-rate-limit';
+import rateLimit from 'express-rate-limit';
 import cors from 'cors';
 
 ConnectDB();
