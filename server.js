@@ -30,8 +30,8 @@ app.use('/uploads', express.static(path.join(import.meta.dirname, 'uploads')));
 
 app.use(limiter);
 app.use('/users', userRouter);
-app.use(userAuth);
-app.use('/students', studentRouter);
+// app.use(userAuth);
+app.use('/students', userAuth, studentRouter);
 
 // Multer Middleware
 app.use((error, req, res, next)=>{
